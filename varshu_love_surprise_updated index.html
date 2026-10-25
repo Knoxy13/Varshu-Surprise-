@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8e8e6">
+<title>For My Varshu ❤️</title>
+<style>
+  :root { --ink:#633b42; --rose:#b84d66; --paper:#fffaf0; --pink:#f7dce2; }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; min-height:100vh; overflow-x:hidden; display:grid; place-items:center;
+    padding:24px 14px; color:var(--ink);
+    background: radial-gradient(circle at 15% 12%, #fff8f2 0 7%, transparent 28%),
+                radial-gradient(circle at 85% 85%, #f3cbd6 0 4%, transparent 32%),
+                linear-gradient(135deg,#f9e7e4,#f7dce5 52%,#fcefe7);
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+  }
+  .glow { position:fixed; inset:0; pointer-events:none; opacity:.3;
+    background-image: radial-gradient(#fff 1px,transparent 1px); background-size:28px 28px; }
+  .wrap { width:min(100%, 680px); position:relative; z-index:1; }
+  .eyebrow { text-align:center; letter-spacing:.22em; text-transform:uppercase; font:11px/1.5 system-ui,sans-serif; color:#a65c6c; margin:0 0 14px; }
+  .letter {
+    position:relative; background:var(--paper); border:1px solid #eed5cf; border-radius:5px;
+    padding:clamp(25px,6vw,54px); box-shadow:0 22px 65px #87435424, 0 3px 8px #87435410;
+    transform:rotate(-.25deg);
+  }
+  .letter:before { content:""; position:absolute; inset:10px; border:1px solid #e9c7c5; pointer-events:none; }
+  .letter:after { content:"♡"; position:absolute; right:27px; top:14px; color:#d48b9b; font-size:26px; }
+  h1 { font-size:clamp(28px,6vw,43px); line-height:1.2; font-weight:normal; text-align:center; margin:0 0 10px; color:#9d4058; }
+  .subtitle { text-align:center; font-style:italic; color:#a16a70; margin:0 0 30px; font-size:15px; }
+  .intro { font-size:clamp(17px,3.5vw,20px); line-height:1.8; text-align:center; white-space:pre-line; }
+  button {
+    display:block; margin:30px auto 0; border:0; border-radius:999px; padding:15px 23px;
+    color:white; background:linear-gradient(135deg,#bd526b,#974054); font:600 14px system-ui,sans-serif;
+    letter-spacing:.02em; box-shadow:0 8px 20px #b84d6635; cursor:pointer; transition:transform .2s, box-shadow .2s;
+  }
+  button:hover { transform:translateY(-2px); box-shadow:0 11px 25px #b84d6644; }
+  button:focus-visible { outline:3px solid #d98fa0; outline-offset:4px; }
+  .hidden { display:none; }
+  .main-message { margin-top:20px; font-size:clamp(16px,3.4vw,19px); line-height:1.95; white-space:pre-wrap; overflow-wrap:anywhere; min-height:30px; }
+  .main-message strong { color:#a43e58; font-weight:normal; font-style:italic; }
+  .signature { text-align:right; font-size:20px; font-style:italic; margin-top:24px; color:#a3445c; }
+  .seal { text-align:center; font-size:26px; margin-top:24px; animation:pulse 1.8s ease-in-out infinite; }
+  .footer { text-align:center; margin:18px 0 0; color:#a46b75; font:12px system-ui,sans-serif; }
+  .heart { position:fixed; bottom:-40px; z-index:5; pointer-events:none; animation:floatUp linear forwards; filter:drop-shadow(0 2px 2px #9c3c5722); }
+  @keyframes floatUp { 0% { transform:translateY(0) rotate(0deg) scale(.7); opacity:0; } 12% {opacity:.95;} 100% {transform:translateY(-115vh) rotate(24deg) scale(1.25);opacity:0;} }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.13)} }
+  .cursor { display:inline-block; width:2px; height:1em; background:#b84d66; vertical-align:-.12em; margin-left:2px; animation:blink .8s steps(2,start) infinite; }
+  @keyframes blink { to {visibility:hidden;} }
+  @media (prefers-reduced-motion: reduce) { *,*:before,*:after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; } }
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+<main class="wrap">
+  <p class="eyebrow">a little something, made with love</p>
+  <section class="letter" aria-live="polite">
+    <div id="intro">
+      <h1>To My Varshu, My Rasmalai, My Heer… ❤️‍🩹</h1>
+      <p class="subtitle">a tiny letter from your bhondu</p>
+      <div class="intro">Muahhh Meri Varshu… ❤️🥹
+
+I made something little for you meri rasmalaiiii..✨ It may just be a tiny page on your screen, but every little thing here comes with a lot of luvv for you..❤️
+
+So take a deep breath, give me that pretty little smile of yours, and open this surprise, okay?
+
+Because somewhere behind this screen, there's a bhondu who feels lucky to have you, who loves you more than he can ever explain, and who would choose you in a thousand different lifetimes.
+
+<strong>Ready, meri Heer? ❤️</strong>
+
+<em>Your bhondu, always. ♾️</em></div>
+      <button id="openBtn" type="button">Open your surprise, Varshu ❤️</button>
+    </div>
+    <div id="reveal" class="hidden">
+      <h1>To My Varshu, My Rasmalai, My Heer… ❤️‍🩹</h1>
+      <p class="subtitle">a letter from your bhondu, Krishna ❤️</p>
+      <div class="main-message" id="typedMessage"></div>
+      <div class="signature hidden" id="signature">Your bhondu, Krishna ❤️</div>
+      <div class="seal hidden" id="seal">∞ ❤️ ∞</div>
+    </div>
+  </section>
+  <p class="footer">made with a little HTML and a whole lot of pyaar ♡</p>
+</main>
+<script>
+const loveLetter = `To My Varshu, My Rasmalai, My Heer… ❤️‍🩹
+
+Pta hai Varshu, kbhi-kbhi mujhe smjh he nhi ata ki mai tume kaise btau ki tum mere liye kya ho.. Tumse baat krna, tumhari batein sunna, tumara ruthna or fir tume mnana… pta nhi kb ye sb meri zindagi ka sbse khubsurat hissa ban gya..❤️😭
+
+Tum sirf meri mohabbat nhi ho, tum vo sukoon ho jo mujhe duniya ke shor mei bhi mil jata ha. 🫶🏻
+
+Or meri rasmalai, mai koi perfect insaan nhi hu.. Kbhi jyada bol deta hu, kbhi apni feelings thik se smjha nhi pata, or kbhi tume vo pyr mehsoos nhi kra pata jo mere dil mei tumare liye ha. Lekin ek baat sch ha — tume khush dekhna mere liye bht mayne rkhta ha or mai chahta hu ki vaqt ke sth mai tumare liye or behtar banu..🫶🏻🌸
+
+Tum rooth bhi jao toh meri hi rehna,
+Mai manaane ki vajah dhundhta rhunga,
+Tum kbhi khud ko akela mat samajhna,
+Mai tumhare dil ko samajhna seekhta rahunga. 💗🥺
+
+Meri Heer, mujhe tumare sth sirf khubsurat din nhi chahiye.. Mujhe vo din bhi chahiye jab hum thode pareshan ho, jab batein ulajh jayein, jab hume ek-dusre ko samajhne ke liye thoda vaqt dena pade.. Mai chahta hu ki hum dono ek-dusre ko sunna, samajhna or sth milkar age badhna seekhe..😫❤️‍🩹
+
+Or agar tum kbhi mujhse pucho ki mai tume hi kyu chunta hu to shyd mere paas koi badi si vjh na ho.. Bas tum ho Varshu 😚 or tumare sth jo apna-pan mehsoos hota ha, voh mere liye bht khaas ha..
+
+Ek bhondu sa ladka, ek uski pyari si Heer,
+Duniya chahe jitni badle, tumhari khushi rhe dil ke karib..
+Na lafzon mei pura ishq, na kalam mei poori kahani,
+Bas tumhara hath thaamei, or sth likhe apni zindagani. ♾️
+
+I luvv you meri Varshu. ✨🫶🏻❤️
+
+Thank you for being you, for the little things you do and for being such a special part of my lyf..🌸💕
+
+Always your bhondu,
+Krishna. ❤️🧿`;
+const btn = document.getElementById('openBtn');
+const intro = document.getElementById('intro');
+const reveal = document.getElementById('reveal');
+const typed = document.getElementById('typedMessage');
+let started = false;
+function makeHeart() {
+  const heart = document.createElement('span');
+  heart.className = 'heart';
+  heart.textContent = ['❤️','💗','💕','♡','💖'][Math.floor(Math.random()*5)];
+  heart.style.left = (Math.random()*100) + 'vw';
+  heart.style.fontSize = (14 + Math.random()*22) + 'px';
+  heart.style.animationDuration = (5 + Math.random()*5) + 's';
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 10500);
+}
+let heartTimer;
+function startHearts() { for(let i=0;i<12;i++) setTimeout(makeHeart,i*140); heartTimer=setInterval(makeHeart,650); }
+function typeText(text, index=0) {
+  if(index===0) typed.textContent='';
+  if(index < text.length) {
+    typed.textContent += text[index];
+    const delay = text[index] === '\n' ? 150 : (',.!?…'.includes(text[index]) ? 100 : 23);
+    setTimeout(() => typeText(text,index+1), delay);
+  } else {
+    document.getElementById('signature').classList.remove('hidden');
+    document.getElementById('seal').classList.remove('hidden');
+    clearInterval(heartTimer);
+    startHearts();
+  }
+}
+btn.addEventListener('click', () => {
+  if(started) return;
+  started = true;
+  intro.classList.add('hidden');
+  reveal.classList.remove('hidden');
+  startHearts();
+  typeText(loveLetter);
+});
+</script>
+</body>
+</html>
